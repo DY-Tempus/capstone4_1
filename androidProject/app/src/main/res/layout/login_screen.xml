@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="391dp"
+        android:layout_height="57dp"
+        android:fontFamily="@font/laundrygothic"
+        android:gravity="center"
+        android:text="Personal color"
+        android:textColor="#59DDDD"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.211" />
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.456"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.362" />
+
+    <EditText
+        android:id="@+id/ediPassword"
+        android:layout_width="284dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.44" />
+
+    <android.widget.Button
+        android:id="@+id/login"
+        android:layout_width="285dp"
+        android:layout_height="47dp"
+        android:background="@drawable/login_btn"
+        android:backgroundTint="#000000"
+        android:text="login"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="63dp"
+        tools:layout_editor_absoluteY="603dp" />
+
+    <android.widget.Button
+        android:id="@+id/membership"
+        android:layout_width="282dp"
+        android:layout_height="45dp"
+        android:background="@drawable/login_btn"
+        android:backgroundTint="@null"
+        android:text="회원가입"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.68" />
+
+    <android.widget.Button
+        android:id="@+id/find_ID_Password"
+        android:layout_width="278dp"
+        android:layout_height="47dp"
+        android:background="@drawable/login_btn"
+        android:backgroundTint="#000000"
+        android:text="아이디/비밀번호 찾기"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="66dp"
+        tools:layout_editor_absoluteY="532dp" />
+
+    <TextView
+        android:id="@+id/blank1"
+        android:layout_width="4dp"
+        android:layout_height="14dp"
+        tools:layout_editor_absoluteX="164dp"
+        tools:layout_editor_absoluteY="61dp" />
+
+    <TextView
+        android:id="@+id/blank2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="167dp"
+        tools:layout_editor_absoluteY="395dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

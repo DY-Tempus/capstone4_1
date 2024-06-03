@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="292dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/laundrygothic"
+        android:text="Personal color"
+        android:textColor="#59DDDD"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.319"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/springWarmButton"
+        android:layout_width="293dp"
+        android:layout_height="120dp"
+        android:backgroundTint="#FDE58F"
+        android:drawableLeft="@drawable/springwarm"
+        android:text="봄 웜톤"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="65dp"
+        tools:layout_editor_absoluteY="92dp" />
+
+    <Button
+        android:id="@+id/summerCoolButton"
+        android:layout_width="343dp"
+        android:layout_height="149dp"
+        android:backgroundTint="#FCE1DA"
+        android:drawableLeft="@drawable/summercool"
+        android:text="여름 쿨톤"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="240dp" />
+
+    <Button
+        android:id="@+id/fallWarmButton"
+        android:layout_width="325dp"
+        android:layout_height="114dp"
+        android:backgroundTint="#E4CFB2"
+        android:drawableLeft="@drawable/fallwarm"
+        android:text="가을 웜톤"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.677" />
+
+    <Button
+        android:id="@+id/winterCoolButton"
+        android:layout_width="324dp"
+        android:layout_height="132dp"
+        android:backgroundTint="#DEE8F2"
+        android:drawableLeft="@drawable/wintercool"
+        android:text="겨울 쿨톤"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="572dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

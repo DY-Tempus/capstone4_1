@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="292dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/laundrygothic"
+        android:text="Personal color"
+        android:textColor="#59DDDD"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.285"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="316dp"
+        android:layout_height="71dp"
+        android:backgroundTint="#F4ACAC"
+        android:gravity="center"
+        android:text="사진 업로드하기"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="47dp"
+        tools:layout_editor_absoluteY="619dp" />
+
+    <TextView
+        android:id="@+id/information"
+        android:layout_width="304dp"
+        android:layout_height="227dp"
+        android:text="TextView"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <ImageView
+        android:id="@+id/exampleImage"
+        android:layout_width="406dp"
+        android:layout_height="192dp"
+        app:srcCompat="@drawable/example"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="387dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

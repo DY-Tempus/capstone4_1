@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/holo_blue_light" />   <!-- 선택되었을 때 배경색 -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/black" /> <!-- 선색 -->
+            <corners
+                android:radius="20dp" /> <!-- 둥근 모서리 -->
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/black" />   <!-- 기본 배경색 -->
+            <stroke
+                android:width="1dp"
+                android:color="@color/black" /> <!-- 선색 -->
+            <corners
+                android:radius="20dp" /> <!-- 둥근 모서리 -->
+        </shape>
+    </item>
+</selector>

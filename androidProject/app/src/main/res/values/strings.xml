@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">personalColor</string>
+    <string name="questions_Title1">Part 1 건성(D) vs 지성(O)</string>
+
+    <string name="questions1">1. 클렌징 후에 아무것도 바르지 않고 2~3시간 후에 밝은 빛 아래서 거울을 보면, 이마와 볼이 어떻게 보이고 느껴집니까?</string>
+    <string name="questions1_1">1) 매우 거칠고, 버석거리고 각질이 들떠 보인다.</string>
+    <string name="questions1_2">2) 당긴다.</string>
+    <string name="questions1_3">3) 당기거나 건조해 보이지 않고 번들거리지 않는다.</string>
+    <string name="questions1_4">4) 밝은 빛에 반사되는 듯이 번들거린다.</string>
+    <string name="questions1_5">No</string>
+
+    <string name="questions2">2. 건조할 때 로션과 같은 모이스처라이저를 바르지 않으면 피부가 어떠합니까?</string>
+    <string name="questions2_1">1) 건조하고 갈라질 것 같다.</string>
+    <string name="questions2_2">2) 당김을 느낀다.</string>
+    <string name="questions2_3">3) 정상적이다.</string>
+    <string name="questions2_4">4) 번들거리고 모이스처라이저가 필요없다.</string>
+    <string name="questions2_5">5) 잘 모르겠다.</string>
+
+    <string name="questions3">3. 평소 당신의 피부 타입을 어떻게 생각하고 있습니까?</string>
+    <string name="questions3_1">1) 건성</string>
+    <string name="questions3_2">2) 중성</string>
+    <string name="questions3_3">3) 복합</string>
+    <string name="questions3_4">4) 지성</string>
+    <string name="questions3_5">No</string>
+
+    <string name="questions4">4. 거품이 많이 나는 비누를 사용할 때 피부의 상태는 어떠합니까?</string>
+    <string name="questions4_1">1) 건조하고 갈라진다.</string>
+    <string name="questions4_2">2) 약간 건조하고 갈라지지 않는다.</string>
+    <string name="questions4_3">3) 정상이다.</string>
+    <string name="questions4_4">4) 금방 유분기가 올라온다.</string>
+    <string name="questions4_5">5) 비누나 거품이 나는 클렌저를 사용하지 않는다.(건조해서 그렇다면 1번을 선택하세요.)</string>
+
+    <string name="questions5">5. 이마와 코 주위에 번들거리는 느낌이 있습니까?</string>
+    <string name="questions5_1">1) 결코 그렇지 않다.</string>
+    <string name="questions5_2">2) 때때로 그렇다.</string>
+    <string name="questions5_3">3) 자주 그렇다.</string>
+    <string name="questions5_4">4) 항상 그렇다.</string>
+    <string name="questions5_5">No</string>
+
+    <string name="questions_Title2">Part 2 민감성(S) vs 저항성(R)</string>
+
+    <string name="questions6">1. 얼굴에 붉은 여드름이 있습니까?</string>
+    <string name="questions6_1">1) 결코 없다.</string>
+    <string name="questions6_2">2) 거의 없다.</string>
+    <string name="questions6_3">3) 최소 한 달에 한 번 정도 나타난다.</string>
+    <string name="questions6_4">4) 최소 한 주에 한 번 정도 나타난다.</string>
+    <string name="questions6_5">No</string>
+
+    <string name="questions7">2. 클렌저, 토너를 비롯한 화장품을 피부에 적용했을 때 발진이나, 가렵고 쏘는 듯한 증상이 나타납니까?</string>
+    <string name="questions7_1">1) 결코 없다.</string>
+    <string name="questions7_2">2) 거의 없다.</string>
+    <string name="questions7_3">3) 자주 그렇다.</string>
+    <string name="questions7_4">4) 항상 그렇다.</string>
+    <string name="questions7_5">5) 제품을 바르지 않는다.</string>
+
+    <string name="questions8">3. 여드름이나 아토피, 습진, 피부염으로 진단 받은적이 있습니까?</string>
+    <string name="questions8_1">1) 아니오</string>
+    <string name="questions8_2">2) 다른 사람들이 볼 때 그렇다고 한다.</string>
+    <string name="questions8_3">3) 한 두 번정도 진단 받은 적이있다.</string>
+    <string name="questions8_4">4) 해당 사안 때문에 병원에 계속 다닌다.</string>
+    <string name="questions8_5">5) 모르겠다.</string>
+
+    <string name="questions9">4. 반지를 꼈던 자리에 붉게 발진이 나타납니까?</string>
+    <string name="questions9_1">1) 결코 없다.</string>
+    <string name="questions9_2">2) 거의 없다.</string>
+    <string name="questions9_3">3) 자주 그렇다.</string>
+    <string name="questions9_4">4) 항상 그렇다.</string>
+    <string name="questions9_5">5) 반지를 끼지 않는다.</string>
+
+    <string name="questions10">5. 가족 중에 아토피, 습진, 알레르기, 천식을 가지고 있는 사람이 있습니까?</string>
+    <string name="questions10_1">1) 없다.</string>
+    <string name="questions10_2">2) 한 명 정도 있다.</string>
+    <string name="questions10_3">3) 여러 명 있다.</string>
+    <string name="questions10_4">4) 가족 대부분이 그렇다.</string>
+    <string name="questions10_5">5) 잘 모르겠다.</string>
+
+    <string name="questions11">6. 운동, 스트레스, 감정 변화 등으로 얼굴과 목이 얼마나 자주 붉어집니까?</string>
+    <string name="questions11_1">1) 결코 없다.</string>
+    <string name="questions11_2">2) 때때로 그렇다.</string>
+    <string name="questions11_3">3) 자주 그렇다.</string>
+    <string name="questions11_4">4) 항상 그렇다.</string>
+    <string name="questions11_5">No</string>
+</resources>

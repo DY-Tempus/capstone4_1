@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="391dp"
+        android:layout_height="57dp"
+        android:fontFamily="@font/laundrygothic"
+        android:gravity="center"
+        android:text="회원가입"
+        android:textColor="#59DDDD"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.077" />
+
+    <TextView
+        android:id="@+id/Information"
+        android:layout_width="158dp"
+        android:layout_height="53dp"
+        android:layout_weight="1"
+        android:text="아이디와 비밀번호는 다음 "
+        android:textColor="#807A7A"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="121dp" />
+
+    <android.widget.Button
+        android:id="@+id/join"
+        android:layout_width="280dp"
+        android:layout_height="48dp"
+        android:background="@drawable/membership_button"
+        android:backgroundTint="@null"
+        android:text="회원가입"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        tools:layout_editor_absoluteX="68dp"
+        tools:layout_editor_absoluteY="653dp" />
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="이름"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="주소"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.552"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.846" />
+
+    <EditText
+        android:id="@+id/checkEdiPassword"
+        android:layout_width="284dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="비밀번호 확인"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.656" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="282dp"
+        android:layout_height="48dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="61dp"
+        tools:layout_editor_absoluteY="323dp">
+
+        <android.widget.Button
+            android:id="@+id/checkID"
+            android:layout_width="165dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/membership_button"
+            android:backgroundTint="@null"
+            android:text="중복확인"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/checkID_Text"
+            android:layout_width="158dp"
+            android:layout_height="53dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="TextView"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editID"
+        android:layout_width="286dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="아이디"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.381" />
+
+    <LinearLayout
+        android:id="@+id/gender"
+        android:layout_width="272dp"
+        android:layout_height="47dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteX="69dp"
+        tools:layout_editor_absoluteY="510dp">
+
+        <android.widget.Button
+            android:id="@+id/boy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/membership_button_selector"
+            android:backgroundTint="@null"
+            android:text="남자"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <android.widget.Button
+            android:id="@+id/girl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/membership_button_selector"
+            android:backgroundTint="@null"
+            android:text="여자"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/ediPassword"
+        android:layout_width="284dp"
+        android:layout_height="39dp"
+        android:layout_gravity="center"
+        android:background="@drawable/btn_white_blackstroke"
+        android:ems="10"
+        android:hint="비밀번호"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.58" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
