@@ -4,10 +4,16 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Looper;
+import android.util.DisplayMetrics;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.bumptech.glide.Glide;
 
 public class firstScreen extends AppCompatActivity {
     @Override
@@ -15,6 +21,10 @@ public class firstScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.first_screen);
+        ImageView image = (ImageView) findViewById(R.id.image);
+        Glide.with(this).load(R.drawable.intro).into(image);
+
+
 
         // 3초 후에 MainActivity로 이동
         new Handler(Looper.getMainLooper()).postDelayed(new Runnable() {

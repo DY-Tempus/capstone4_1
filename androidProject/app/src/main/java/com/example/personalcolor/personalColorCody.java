@@ -3,6 +3,7 @@ package com.example.personalcolor;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
@@ -32,6 +33,7 @@ public class personalColorCody extends AppCompatActivity {
     private TextView codyTotalAmount;
     private int buttonMargin = 8; // 버튼 사이의 거리 (dp 단위)
     private String personalColor;
+    private String siteLink; // 사이트 링크를 저장할 변수
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -86,7 +88,7 @@ public class personalColorCody extends AppCompatActivity {
 
         // 크기 설정
         int imageViewWidth = (int) (width * 1);
-        int imageViewHeight = (int) (height * 0.4);
+        int imageViewHeight = (int) (height * 0.45);
         int priceLayoutWidth = (int) (width * 0.9);
         int priceLayoutHeight = (int) (height * 0.32);
 
@@ -99,7 +101,6 @@ public class personalColorCody extends AppCompatActivity {
         imageViewParams.startToStart = ConstraintLayout.LayoutParams.PARENT_ID;
         imageViewParams.endToEnd = ConstraintLayout.LayoutParams.PARENT_ID;
         imageViewParams.topToBottom = buttonGrid.getId();
-        imageViewParams.topMargin = dpToPx(8);
         codyImage.setLayoutParams(imageViewParams);
         codyImage.setVisibility(View.INVISIBLE);
 
@@ -131,6 +132,16 @@ public class personalColorCody extends AppCompatActivity {
         codyTotalAmount.setLayoutParams(priceParams);
         codyTotalAmount.setVisibility(View.INVISIBLE);
 
+        // 이미지 클릭 이벤트 설정
+        codyImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (siteLink != null && !siteLink.isEmpty()) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(siteLink));
+                    startActivity(browserIntent);
+                }
+            }
+        });
     }
 
     private void createButtons(int numRows, int numCols) {
@@ -222,6 +233,7 @@ public class personalColorCody extends AppCompatActivity {
                 if (rs.next()) {
                     InputStream inputStream = rs.getBinaryStream("ClothesImage");
 
+                    //Total 계산
                     for(int i = 1 ; i < 6 ; i++){
                         price = rs.getString("Price"+i);
                         if(price != null && !price.isEmpty()){
@@ -230,13 +242,21 @@ public class personalColorCody extends AppCompatActivity {
                         }
                     }
 
-                    codyInformation =   rs.getString("ClothesName1") + ": " + rs.getString("Price1") + "\n" +
-                            rs.getString("ClothesName2") + ": " + rs.getString("Price2") + "\n" +
-                            rs.getString("ClothesName3") + ": " + rs.getString("Price3") + "\n" +
-                            rs.getString("ClothesName4") + ": " + rs.getString("Price4") + "\n" +
-                            rs.getString("ClothesName5") + ": " + rs.getString("Price5");
+                    //codyInformation 제작
+                    String checkNull;
+                    codyInformation = rs.getString("ClothesName1") + ": " + rs.getString("Price1") + "\n";//첫번째는 받아옴
+                    for(int i = 2 ; i < 6 ; i++){
+                        checkNull = rs.getString("ClothesName"+i);
+                        if(checkNull != null && !checkNull.isEmpty()){
+                            codyInformation += rs.getString("ClothesName"+i) + ": " + rs.getString("Price"+i) + "\n";
+                        }
+                        else{
+                            break;
+                        }
+                    }
                     totalAmount = "총가격\n" + total; // 총합 나타내는거
                     image = BitmapFactory.decodeStream(inputStream);
+                    siteLink = rs.getString("SiteLink"); // 사이트 링크 가져오기
                 }
             } catch (SQLException e) {
                 e.printStackTrace();

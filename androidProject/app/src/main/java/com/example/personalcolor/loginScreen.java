@@ -1,5 +1,6 @@
 package com.example.personalcolor;
 
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
@@ -186,18 +187,44 @@ public class loginScreen extends AppCompatActivity {
         try {
             rs = DB.findID(ID);
             if (rs != null) {
+                boolean idFound = false;
                 while (rs.next()) {
+                    idFound = true;
                     String[] information = new String[5];
                     information[0] = rs.getString("ID");
-                    information[1]= rs.getString("PW");
+                    information[1] = rs.getString("PW");
                     information[2] = rs.getString("Name1");
                     information[3] = rs.getString("Gender");
                     information[4] = rs.getString("Address");
 
-                    if (ID.equals(information[0]) && Password.equals(information[1])) {
+                    if (!ID.equals(information[0])) {   //아이디 확인
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                showDialogMessage("아이디 틀렸습니다.", "아이디를 확인해주세요.");
+                            }
+                        });
+                        return false;
+                    } else if (!Password.equals(information[1])) {  //비밀번호 확인
+                        handler.post(new Runnable() {
+                            @Override
+                            public void run() {
+                                showDialogMessage("패스워드가 틀렸습니다.", "패스워드를 확인해주세요.");
+                            }
+                        });
+                        return false;
+                    } else {
                         user.setIdPassword(information);
                         return true;
                     }
+                }
+                if (!idFound) {
+                    handler.post(new Runnable() {
+                        @Override
+                        public void run() {
+                            showDialogMessage("아이디 틀렸습니다.", "아이디를 확인해주세요.");
+                        }
+                    });
                 }
             }
         } catch (SQLException throwables) {
@@ -212,6 +239,16 @@ public class loginScreen extends AppCompatActivity {
             }
         }
         return false;
+    }
+
+    //로그인 안내
+    void showDialogMessage(String title,String message) {
+        AlertDialog.Builder msgBuilder = new AlertDialog.Builder(loginScreen.this)
+                .setTitle(title)
+                .setMessage(message)
+                .setPositiveButton("확인",null);
+        AlertDialog msgDlg = msgBuilder.create();
+        msgDlg.show();
     }
 
     private int dpToPx(int dp) {

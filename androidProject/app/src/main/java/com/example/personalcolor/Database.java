@@ -45,6 +45,7 @@ public class Database {
         return rs;
     }
 
+    //새로운 계정 데이터베이스에 입력
     public void insertUser(String[] userInformation) throws SQLException {
         String query = "INSERT INTO Member (ID, PW, Name1, Gender, Address) VALUES (?, ?, ?, ?, ?)";
         PreparedStatement pstmt = null;
@@ -92,6 +93,23 @@ public class Database {
             DB_Connect();
             stmt = con.prepareStatement(query);
             stmt.setString(1, ClothesID);
+            rs = stmt.executeQuery();
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw e;
+        }
+        return rs;
+    }
+
+    // 색깔 정보 가져오는 코드
+    public ResultSet getColorInfo(String personalColor) throws SQLException {
+        String query = "SELECT ColorHex, ColorName FROM ColorInfo WHERE PersonalColor = ?";
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        try {
+            DB_Connect();
+            stmt = con.prepareStatement(query);
+            stmt.setString(1, personalColor);
             rs = stmt.executeQuery();
         } catch (SQLException e) {
             e.printStackTrace();

@@ -19,21 +19,6 @@
 
     </androidx.gridlayout.widget.GridLayout>
 
-    <TextView
-        android:id="@+id/mainText"
-        android:layout_width="292dp"
-        android:layout_height="59dp"
-        android:fontFamily="@font/laundrygothic"
-        android:text="Personal color"
-        android:textColor="#59DDDD"
-        android:textSize="34sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.352"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
-
     <ImageView
         android:id="@+id/codyImage"
         android:layout_width="327dp"
@@ -74,5 +59,16 @@
             tools:layout_editor_absoluteX="237dp"
             tools:layout_editor_absoluteY="544dp" />
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/mainText"
+        android:layout_width="292dp"
+        android:layout_height="59dp"
+        android:fontFamily="@font/laundrygothic"
+        android:text="Personal color"
+        android:textColor="#59DDDD"
+        android:textSize="34sp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

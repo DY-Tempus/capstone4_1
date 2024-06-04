@@ -22,7 +22,6 @@ public class skinDiagnosis extends AppCompatActivity {
 
     int number = 0;//지금 위치 0-10번까지
     int[] score = new int[11];// 문항별 선택한 번호 기입
-
     private ProgressBar progressBar;
     private TextView Title;
     private TextView questions;
@@ -249,7 +248,6 @@ public class skinDiagnosis extends AppCompatActivity {
         });
 
     }
-
 
     void showDialogCheck(String title,String message) {
         AlertDialog.Builder msgBuilder = new AlertDialog.Builder(skinDiagnosis.this)
